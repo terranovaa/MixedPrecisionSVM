@@ -1,18 +1,20 @@
 # Mixed Precision SVM
-Real-time or power-constrained applications employs smaller number formats
+Real-time or power-constrained applications employ smaller number formats
 (posits) to result in smaller memory footprints, higher performance, and lower
-power consumption. <br> The key task of every efficient implementation is to iden-
-tify the lowest working precision acceptable to achieve a classification accuracy
-comparable to a reference implementation in double precision floating-point
+power consumption. <br> The key task of every efficient implementation is to identify the lowest working precision acceptable to achieve a classification accuracy
+comparable to a reference implementation in double-precision floating-point
 arithmetic. <br>
 The focus of this project is to realize a modified version of the Support Vector
 Machine optimization problem, that takes into account the fact that during the
 inference phase, the model will be executed on devices that use low precision
-posits.
+posits.<br>
+In particular, the idea of this project is to modify the underlying optimization method during the training phase, modifying the constraints in the dual problem, in order to have better results at inference time with posits.
+<img width="589" alt="image" src="https://github.com/terranovaa/MixedPrecisionSVM/assets/61695945/b3a117c2-1a0c-423b-ad33-3940c047034b">
+
 
 ## Project Structure
 The project is organized as follows:
-- matlab/ contains the matlab scripts used to load datasets and find the optimal solutions of the optimization problems
+- matlab/ contains the matlab scripts used to load datasets and find the optimal solutions to the optimization problems
 - datasets/ contains the datasets used for evaluating our solution
 - main_lambdas.cpp contains the code used to perform inference starting from the dual optimal solutions (Scenarios 1,2,3) 
 - main_wb.cpp contains the code used to perform inference starting from the primal optimal solutions (Scenarios 4,5)

@@ -8,7 +8,7 @@ The focus of this project is to realize a modified version of the Support Vector
 Machine optimization problem, that takes into account the fact that during the
 inference phase, the model will be executed on devices that use low precision
 posits.<br>
-In particular, the idea of this project is to modify the underlying optimization method during the training phase, modifying the constraints in the dual problem, in order to have better results at inference time with posits.
+In particular, the idea of this project is to modify the underlying optimization method during the training phase, modifying the constraints in the dual problem, in order to have better results at inference time with posits. 
 <img width="589" alt="image" src="https://github.com/terranovaa/MixedPrecisionSVM/assets/61695945/b3a117c2-1a0c-423b-ad33-3940c047034b">
 
 
